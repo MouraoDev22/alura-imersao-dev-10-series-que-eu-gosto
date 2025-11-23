@@ -1,10 +1,9 @@
 # Catálogo de Séries Favoritas
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Ver%20Online-brightgreen)]([https://seu-usuario.github.io/seu-repositorio/](https://mouraodev22.github.io/alura-imersao-dev-10-series-que-eu-gosto))
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Ver%20Online-brightgreen)](https://seu-usuario.github.io/seu-repositorio/](https://mouraodev22.github.io/alura-imersao-dev-10-series-que-eu-gosto)
 <!-- Sugestão: Substitua o link acima pelo link do seu GitHub Pages -->
 
-![Prévia do Projeto](https://img.shields.io/badge/<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/571b2468-76d0-4310-b880-d4300184c398" />
-) 
+![Prévia do Projeto]<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/571b2468-76d0-4310-b880-d4300184c398"/> 
 <!-- Sugestão: Tire um print da sua aplicação e adicione aqui -->
 
 Projeto desenvolvido durante a **10ª Edição da Imersão Dev** da Alura em parceria com o Google. A aplicação consiste em um catálogo interativo para exibir e filtrar uma coleção de séries de TV.
