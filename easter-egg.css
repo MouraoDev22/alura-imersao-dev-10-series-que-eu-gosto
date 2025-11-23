@@ -1,0 +1,28 @@
+/* --- Estilos do Easter Egg --- */
+
+/* Estilo para o balão vermelho */
+.red-balloon {
+    position: absolute;
+    bottom: -200px; /* Começa fora da tela, embaixo */
+    width: 150px;
+    height: 200px;
+    background-image: url('./imagens/red-balloon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: floatUp 10s linear forwards; /* Animação de subida */
+    z-index: 10; /* Garante que fique na frente do texto, se houver */
+    opacity: 0.9;
+}
+
+/* Animação para o balão flutuar para cima */
+@keyframes floatUp {
+    0% {
+        bottom: -200px; /* Posição inicial */
+        transform: translateX(0);
+    }
+    100% {
+        bottom: 110%; /* Posição final, some no topo da tela */
+        transform: translateX(20px) rotate(5deg); /* Leve movimento lateral e rotação */
+    }
+}

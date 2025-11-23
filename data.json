@@ -1,0 +1,98 @@
+[
+    {
+        "poster": "posters/alice-in-borderland-official-poster.webp",
+        "alt": "Pôster da série Alice in Borderland",
+        "titulo": "Alice in Borderland",
+        "generos": ["Ação", "Drama", "Suspense", "Ficção Científica"],
+        "sinopse": "Arisu, um jovem apático, desempregado e obcecado por videogames, se vê de repente em uma estranha e vazia versão de Tóquio. Lá, ele e seus amigos precisam competir em jogos perigosos para sobreviver. Neste mundo, Arisu conhece Usagi, uma jovem que enfrenta os jogos sozinha. Juntos, eles se arriscam para desvendar um mistério atrás do outro, arriscando suas vidas para descobrir o que significa viver.",
+        "video": "https://www.youtube.com/embed/6nrokbzflaQ"
+    },
+    {
+        "poster": "posters/it-welcome-to-derry-official-poster.webp",
+        "alt": "Pôster da série IT: Welcome to Derry",
+        "titulo": "IT: Welcome to Derry", 
+        "generos": ["Terror", "Suspense", "Fantasia"],
+        "sinopse": "IT: Bem-vindos a Derry é um prelúdio dos filmes de It - A Coisa, que mergulha nos eventos que antecedem a história da famosa obra de Stephen King. Ambientada na década de 1960, a série retorna à cidade de Derry, onde o temido palhaço Pennywise continua a aterrorizar os habitantes. Ao longo da trama, somos apresentados à origem da criatura maligna, que chega à Terra de uma maneira misteriosa, desencadeando uma jornada de terror que envolve as crianças da cidade. Em 1958, um grupo de sete amigos começa a vivenciar fenômenos estranhos e sobrenaturais. Alguns relatam aparições de um palhaço, outros de uma múmia, até que, juntos, descobrem que o que estão vendo é uma entidade aterradora que pode assumir diversas formas. Esse ser maligno, conhecido como Pennywise, alimenta-se do medo e é capaz de se disfarçar de qualquer pesadelo que assombre as mentes das crianças.",
+        "video": "https://www.youtube.com/embed/qwTop2qs1tE"
+    },
+    {
+        "poster": "posters/squid-game-official-poster.webp",
+        "alt": "Pôster da série Squid Game",
+        "titulo": "Squid Game",
+        "generos": ["Ação", "Drama", "Suspense"],
+        "sinopse": "Squid Game, série sul-coreana original da Netflix, acompanha um grupo de pessoas desesperadas por dinheiro que recebem um misterioso convite para participar de jogos competitivos inspirados em brincadeiras infantis. Sem saber qualquer coisa sobre o convite, centenas de pessoas comparecem ao local para participar do evento. Ao final do jogo, o vencedor poderá levar para casa um prêmio milionário e resolver todas as suas dívidas. Porém, o que eles não sabem é que os perdedores não saírão vivos desse jogo. Agora os competidores precisarão lutar para sobreviver a essa macabra disputa.",
+        "video": "https://www.youtube.com/embed/OgDraEI7i8Y"
+    },
+    {
+        "poster": "posters/the-walking-dead-official-poster.webp",
+        "alt": "Pôster da série The Walking Dead",
+        "titulo": "The Walking Dead",
+        "generos": ["Terror", "Suspense", "Ação", "Drama"],
+        "sinopse": "Em The Walking Dead, depois de ser baleado e passar meses em coma, o xerife Rick Grimes (Andrew Lincolm) acorda sozinho em um hospital deserto. Para sua surpresa, o mundo como conhecia deixou de existir depois que um perigoso vírus provoca uma infestação de zumbis na cidade de Cynthiana, em Kentucky, nos Estados Unidos. Desesperado, Rick enfrenta a estranha ameaça na expectativa de reencontrar a mulher Lori (Sarah Wayne Callies) e o filho Cal (Chandler Riggs). Ele decide unir-se aos homens e mulheres sobreviventes para que tenham mais força para combater o fenômeno que os atinge. O grupo percorre diferentes lugares em busca de soluções para o problema. Aos poucos, eles percebem que a infestação de mortos é maior do que pensavam, se espalhando por todo o país, e possivelmente o resto do mundo. A sociedade que conheciam já não existe mais e tudo que resta é o desejo de sobreviver. Em meio ao caos da nova ordem mundial, Rick e seus companheiros percebem que os humanos sobreviventes podem ser uma ameaça maior que os próprios zumbis.",
+        "video": "https://www.youtube.com/embed/of-Bqmlgj98"
+    },
+    {
+        "poster": "posters/full-house-official-poster.webp",
+        "alt": "Pôster da série Full House",
+        "titulo": "Full House",
+        "generos": ["Comédia", "Sitcom"],
+        "sinopse": "A história começa em 1987, quando Danny Tanner (Bob Saget) perde sua esposa, Pam, em um acidente de carro. Ele precisa, então, de ajuda para cuidar de suas três filhas, D.J. (Candace Cameron), Stephanie (Jodie Sweetin) e Michelle (Mary-Kate/Ashley Olsen). Para isso, Danny recorre ao seu melhor amigo, Joey Gladstone (Dave Coulier) e a seu cunhado, Jesse Cochran (John Stamos). O que deveriam ser apenas algumas semanas transforma-se em anos de convivência.",
+        "video": "https://www.youtube.com/embed/6mrUcjU8n3U"
+    },
+    {
+        "poster": "posters/breaking-bad-official-poster.webp",
+        "alt": "Pôster da série Breaking Bad",
+        "titulo": "Breaking Bad",
+        "generos": ["Drama", "Suspense", "Crime"],
+        "sinopse": "Ao ser diagnosticado com câncer de pulmão terminal, o professor de química Walter White (Bryan Cranston) decide usar seus conhecimentos para produzir e vender metanfetamina de alta pureza com seu ex-aluno Jesse Pinkman (Aaron Paul). Seu objetivo é garantir o futuro financeiro de sua família, mas ele acaba mergulhando em um perigoso mundo do crime.",
+        "video": "https://www.youtube.com/embed/TDFAYRtrYuk"
+    },
+    {
+        "poster": "posters/game-of-thrones-official-poster.webp",
+        "alt": "Pôster da série Game of Thrones",
+        "titulo": "Game of Thrones",
+        "generos": ["Fantasia", "Drama", "Ação"],
+        "sinopse": "Em uma terra onde os verões podem durar décadas e os invernos uma vida inteira, os problemas estão se formando. De sul a norte, duas famílias poderosas estão travando uma guerra pelo controle dos Sete Reinos de Westeros. Enquanto isso, do outro lado do mar, a última herdeira da dinastia deposta planeja seu retorno ao poder. E no norte, uma antiga ameaça desperta.",
+        "video": "https://www.youtube.com/embed/s7L2PVdrb_8"
+    },
+    {
+        "poster": "posters/stranger-things-official-poster.webp",
+        "alt": "Pôster da série Stranger Things",
+        "titulo": "Stranger Things",
+        "generos": ["Fantasia", "Suspense", "Ficção Científica"],
+        "sinopse": "Quando um garoto desaparece, sua mãe, um chefe de polícia e seus amigos devem confrontar forças sobrenaturais aterrorizantes para recuperá-lo. A cidade de Hawkins, Indiana, esconde um portal para uma dimensão alternativa, o Mundo Invertido, e os segredos de um laboratório do governo.",
+        "video": "https://www.youtube.com/embed/-RcPZdihrp4"
+    },
+    {
+        "poster": "posters/the-office-official-poster.webp",
+        "alt": "Pôster da série The Office",
+        "titulo": "The Office",
+        "generos": ["Comédia", "Sitcom"],
+        "sinopse": "Um documentário fictício sobre o dia a dia dos funcionários de um escritório da empresa de papel Dunder Mifflin. Liderados pelo gerente regional Michael Scott, a equipe enfrenta situações hilárias e constrangedoras, enquanto buscam propósito e amizade em seus trabalhos.",
+        "video": "https://www.youtube.com/embed/sqyde2jcLdQ"
+    },
+    {
+        "poster": "posters/friends-official-poster.webp",
+        "alt": "Pôster da série Friends",
+        "titulo": "Friends",
+        "generos": ["Comédia", "Romance", "Sitcom"],
+        "sinopse": "Seis amigos em seus 20 e poucos anos vivem em Manhattan, Nova York, e enfrentam os altos e baixos da vida, trabalho e amor. A série acompanha as aventuras e desventuras de Rachel, Monica, Phoebe, Joey, Chandler e Ross no café Central Perk e em seus apartamentos.",
+        "video": "https://www.youtube.com/embed/Kz_O2miyUKE"
+    },
+    {
+        "poster": "posters/the-crown-official-poster.webp",
+        "alt": "Pôster da série The Crown",
+        "titulo": "The Crown",
+        "generos": ["Drama", "Histórico", "Biografia"],
+        "sinopse": "Esta série dramática segue as rivalidades políticas e os romances do reinado da Rainha Elizabeth II, bem como os eventos que moldaram a segunda metade do século XX. A cada temporada, a série explora uma nova era da monarquia britânica.",
+        "video": "https://www.youtube.com/embed/yJdrrrIT8hQ"
+    },
+    {
+        "poster": "posters/black-mirror-official-poster.webp",
+        "alt": "Pôster da série Black Mirror",
+        "titulo": "Black Mirror",
+        "generos": ["Ficção Científica", "Suspense", "Drama"],
+        "sinopse": "Uma série de antologia que explora um futuro próximo distorcido e tecnológico, onde as maiores inovações da humanidade colidem com seus instintos mais sombrios. Cada episódio é uma história independente que mergulha na paranoia coletiva do mundo moderno.",
+        "video": "https://www.youtube.com/embed/jXq23Tq9FeU"
+    }
+]

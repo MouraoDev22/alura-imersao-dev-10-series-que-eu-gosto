@@ -1,0 +1,702 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@300;400;500;600&family=Roboto:wght@400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #e8eaed;
+    --tertiary-color: #9aa0a6;
+    --bg-color: #141414; /* Tom de preto mais profundo, comum em streamings */
+    --accent-color: #fff; /* Adicionada variável que estava faltando */
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--secondary-color);
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body[style*="--body-bg-image"]::before {
+    opacity: 1; /* Torna visível quando a imagem de fundo é definida */
+}
+
+/* --- Custom Scrollbar Styles --- */
+
+/* Para navegadores baseados em WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 6px; /* Largura da barra de rolagem (mais fina) */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; /* O trilho da barra é invisível */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3); /* Cor branca semi-transparente por padrão */
+    border-radius: 20px; /* Bordas arredondadas */
+    transition: background-color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1); /* Transição mais suave */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.6); /* Fica mais opaca (branca) ao passar o mouse */
+    background-color: var(--accent-color); /* Fica totalmente branca */
+    box-shadow: 0 0 8px var(--accent-color); /* Adiciona um efeito de brilho/bloom */
+}
+
+header {
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent; /* Deixa o header transparente */
+    border-bottom: 1px solid transparent; /* Remove a borda inferior */
+    gap: 1rem;
+}
+
+header h1 {
+    font-family: 'Krona One', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.header-title-link {
+    color: inherit; /* Herda a cor do elemento pai (h1) */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-container input {
+    padding: 0.75rem 8rem 0.75rem 1.5rem; /* Aumentado padding-right para acomodar o botão */
+    border-radius: 8px; /* Menos arredondado, como os artigos */
+    border: none; /* Remove a borda sólida */
+    background: #1a1a1a; /* Mesmo fundo dos artigos */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    transition: box-shadow 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    width: 35rem; /* Largura ajustada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra sutil, como nos artigos */
+}
+
+.search-container input::placeholder {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--tertiary-color);
+}
+
+.search-container input:focus {
+    outline: none;
+    border-color: var(--tertiary-color); /* Mantém a borda base para a transição */
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.3); /* Efeito de brilho branco, mais sutil */
+}
+
+#botao-busca {
+    position: absolute; /* Posiciona o botão dentro do container */
+    right: 4.5rem; /* Espaçamento ajustado para considerar o botão de menu */
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0.5rem 1.5rem; /* Padding interno do botão */
+    border-radius: 8px; /* Consistente com a barra de busca */
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 1rem;
+    white-space: nowrap;
+    transition: background-color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    background-color: #1a1a1a; /* Consistente com a barra de busca */
+    color: var(--tertiary-color);
+}
+
+#botao-busca:hover {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color); /* Texto branco para maior contraste */
+    box-shadow: 0 0 8px var(--tertiary-color); /* Efeito de brilho consistente */
+}
+
+#botao-busca:active {
+    /* Efeito de "piscar" e "bloom" ao clicar */
+    transform: translateY(-50%) scale(1.02); /* Combina o centramento com o efeito de clique */
+    background-color: var(--accent-color); /* Fundo branco */
+    color: var(--bg-color); /* Texto escuro */
+    box-shadow: 0 0 16px var(--accent-color); /* Bloom mais intenso */
+}
+
+/* --- Botão de Menu (Hamburguer) --- */
+.menu-toggle-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: #1a1a1a; /* Fundo igual ao da busca */
+    border: none;
+    border-radius: 50%; /* Deixa o botão circular */
+    cursor: pointer;
+    padding: 0.6rem; /* Ajusta o padding para centralizar o ícone */
+    box-sizing: border-box;
+    transition: background-color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* Animação do botão de menu para "X" */
+.menu-toggle-btn.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.menu-toggle-btn.open span:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle-btn.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.menu-toggle-btn span {
+    width: 100%;
+    height: 2px;
+    background-color: var(--tertiary-color);
+    border-radius: 10px;
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.2s ease-in-out;
+}
+
+.menu-toggle-btn:hover {
+    background-color: var(--tertiary-color); /* Mesma cor de hover do botão de busca */
+    box-shadow: 0 0 8px var(--tertiary-color); /* Efeito de brilho consistente */
+}
+
+.menu-toggle-btn:hover span {
+    background-color: var(--primary-color);
+}
+
+/* --- Barra Lateral de Filtros --- */
+.filter-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100%;
+    background-color: rgba(20, 20, 20, 0.95); /* Fundo semi-transparente com desfoque */
+    backdrop-filter: blur(10px);
+    border-left: 1px solid #3c4043;
+    padding: 2rem;
+    z-index: 1000;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    transform: translateX(100%); /* Esconde a barra fora da tela à direita por padrão */
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1); /* Adiciona a animação de deslize */
+}
+
+.filter-sidebar.open {
+    transform: translateX(0); /* Desliza para a visão */
+}
+
+.filter-sidebar h3 {
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--tertiary-color);
+    padding-bottom: 0.5rem;
+}
+
+.filter-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.filter-options label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--secondary-color);
+    transition: color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.filter-options label:hover {
+    color: var(--primary-color); /* Texto fica azul */
+    text-shadow: 0 0 8px var(--accent-color); /* Efeito de bloom branco */
+}
+
+.filter-options input[type="checkbox"] {
+    margin-right: 0.75rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    /* Estilização customizada do checkbox */
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 1px solid var(--tertiary-color);
+    border-radius: 4px;
+    cursor: pointer; /* Adiciona transição para o transform também */
+    transition: background-color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), border-color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.2s ease-out;
+}
+
+/* Overlay para fechar o menu */
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999; /* Fica abaixo do menu, mas acima do resto */
+}
+
+/* Estilo do checkbox quando marcado */
+.filter-options input[type="checkbox"]:checked {
+    background-color: var(--accent-color); /* Fundo branco, para consistência */
+    border-color: var(--accent-color);
+    transform: scale(1.1); /* Leve aumento de tamanho ao ser marcado */
+    /* Símbolo de check (V) branco usando SVG embutido */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23141414' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+}
+
+/* Quando a sidebar está aberta, mostra o overlay para permitir o fechamento */
+body.sidebar-open .sidebar-overlay {
+    display: block;
+}
+main {
+    max-width: 80rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; /* Impede que os itens se estiquem verticalmente */
+    gap: 1.5rem;
+    padding: 0 1rem;
+    flex-grow: 1; /* Faz o conteúdo principal crescer e empurrar o footer para baixo */
+}
+
+article {
+    position: relative; /* Necessário para o pseudo-elemento de overlay */
+    background: #1a1a1a;
+    border-radius: 8px;
+    margin-bottom: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    flex: 0 1 180px; /* Impede de crescer, permite encolher, com base de 180px */
+    max-width: 220px; /* Impede que fique largo demais na grade */
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Classes para esconder artigos via JS */
+.hidden-by-filter,
+.hidden-by-search {
+    /* Remove o artigo do layout, permitindo que os outros se reorganizem */
+    display: none;
+}
+
+/* Estilo para a mensagem de "Nenhum resultado" */
+.no-results-message {
+    width: 100%; /* Ocupa toda a largura do contêiner principal */
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--tertiary-color);
+    padding: 4rem 1rem;
+}
+
+/* Quando um artigo está em hover, escurece todos os outros artigos irmãos */
+article:hover ~ article,
+main:has(article:hover) article:not(:hover) {
+    opacity: 0.4;
+}
+
+article:not(.expanded):hover {
+    transform: scale(1.05); /* Efeito de zoom um pouco maior */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Overlay de gradiente no hover */
+article:not(.expanded)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;    transition: opacity 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+article:not(.expanded):hover::after {
+    opacity: 1;
+}
+
+.article-poster {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0; /* Apenas cantos superiores arredondados */
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+article:not(.expanded) .article-content-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    z-index: 2; /* Fica acima do overlay de gradiente */
+}
+
+/* Esconde o main e o footer quando um artigo está aberto */
+body.article-view-active header,
+body.article-view-active main > article:not(.expanded),
+body.article-view-active .footer {
+    display: none;
+}
+
+/* Estilos para o artigo expandido */
+article.expanded {
+    position: fixed;
+    top: 0; /* Ocupa a tela inteira, desde o topo */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    background-color: transparent; /* Fundo principal fica transparente */
+    z-index: 100;
+    overflow: hidden; /* Rolagem será interna nas colunas */
+    /* Layout de 2 colunas */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Alinha itens no topo */
+    gap: 2rem;
+    padding: 2rem;
+    text-align: left;
+}
+
+/* Pseudo-elemento para criar o fundo desfocado e escurecido */
+article.expanded::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: var(--bg-image); /* Usa a variável definida pelo JS */
+    background-size: cover;
+    background-position: center;
+    filter: blur(25px) brightness(0.25); /* Desfoque e escurecimento */
+    transform: scale(1.1); /* Aumenta a escala para evitar bordas visíveis do desfoque */
+    z-index: -1; /* Coloca o fundo atrás do conteúdo */
+}
+
+/* Botão de fechar o artigo expandido */
+.close-article-btn {
+    display: none; /* Escondido por padrão */
+    position: absolute;
+    top: 1.5rem;
+    right: 3.5rem; /* Mais afastado da borda direita */
+    width: 3rem; /* Define largura */
+    height: 3rem; /* Define altura */
+    background: rgba(26, 26, 26, 0.7); /* Fundo semitransparente para contraste */
+    border: none;
+    border-radius: 50%; /* Deixa o botão circular */
+    color: rgba(255, 255, 255, 0.3); /* Mesma cor padrão da barra de rolagem */
+    font-size: 3rem;
+    font-weight: 300; /* Espessura similar às linhas do menu */
+    line-height: 1;
+    cursor: pointer;
+    z-index: 110; /* Acima do conteúdo do artigo */
+    transition: color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), background-color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.close-article-btn:hover {
+    color: var(--accent-color);
+    background-color: rgba(40, 40, 40, 0.9);
+    box-shadow: 0 0 8px var(--accent-color); /* Adiciona o efeito de brilho */
+}
+
+article.expanded .close-article-btn {
+    display: flex; /* Mostra o botão quando o artigo está expandido */
+    align-items: center;
+    justify-content: center;
+}
+
+/* O pôster na coluna da esquerda */
+article.expanded .article-poster {
+    flex: 0 1 30%; /* Base de 30%, pode encolher */
+    max-height: calc(100vh - 4rem); /* Altura máxima da área visível (tela - padding) */
+    width: auto; /* Largura se ajusta para manter proporção */
+    object-fit: contain; /* Garante que a imagem inteira seja visível */
+    margin-bottom: 0; /* Reseta margem */
+    border-radius: 8px;
+}
+
+/* Wrapper para o conteúdo da direita */
+article.expanded .article-content {
+    flex: 1; /* Ocupa o espaço restante */
+    overflow-y: auto; /* Permite rolagem apenas nesta coluna */
+    height: calc(100vh - 4rem); /* Altura da tela - padding */
+    padding-right: 1rem; /* Espaço para a barra de rolagem */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Título do artigo na visualização expandida */
+article.expanded .article-content h2 {
+    font-size: 2.5rem; /* Título maior para mais destaque */
+    font-weight: 600;
+}
+
+article h2 {
+    margin-top: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0.25rem;
+    color: var(--accent-color); /* Cor padrão alterada para branco */
+    transition: color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1); /* Mantém a transição para outras possíveis interações */
+}
+
+/* Esconde a sinopse por padrão */
+article p {
+    line-height: 1.6;
+    font-size: 1rem;
+    color: var(--secondary-color);
+    display: none;
+}
+
+/* Mostra a sinopse quando o artigo está expandido */
+article.expanded .article-content p {
+    display: block;
+    margin-top: 0;
+}
+
+.article-video-container {
+    display: none; /* Esconde o vídeo por padrão */
+}
+
+article.expanded .article-content .article-video-container {
+    display: block; /* Mostra o vídeo quando o artigo está expandido */
+    margin-top: 0;
+}
+
+.article-video-container h3 {
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+article p strong {
+    color: var(--tertiary-color);
+    font-weight: 400;
+}
+
+article a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 200;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    width: 100%;
+    color: var(--tertiary-color);
+    background-color: var(--bg-color);
+    padding: 15px 20px;
+    border-top: 1px solid #3c4043;
+    font-size: 0.8rem;
+}
+
+.footer-location {
+    color: #9aa0a6;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    align-items: center;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 5rem; /* Aumenta o espaço entre os dois grupos */
+}
+
+.footer-group-left,
+.footer-group-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+.footer-group-right {
+    color: var(--secondary-color);
+    font-weight: 300;
+}
+
+.footer-links a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), filter 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-weight: 300;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+    transform: scale(1.1); /* Aumenta o tamanho do link em 10% */
+    filter: drop-shadow(0 0 5px var(--accent-color)); /* Adiciona o efeito de brilho branco */
+}
+
+.footer-links svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor; /* O ícone herda a cor do link (<a>) */
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    header h1 {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .search-container input {
+        width: 90vw;
+        font-size: 1.2rem;
+    }
+
+    main {
+        padding: 0 1rem;
+    }
+
+    article:hover {
+        transform: none;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1rem;
+        max-width: 70%;
+        word-wrap: break-word;
+    }
+
+    .search-container input,
+    .search-container input::placeholder {
+        font-size: 1rem;
+    }
+
+    article h2 {
+        font-size: 1.3rem;
+    }
+
+    .search-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    button {
+        margin-top: 1rem;
+    }
+}
+
+/* --- Easter Egg Styles --- */
+
+.easter-egg-trigger {
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.easter-egg-trigger:hover {
+    color: #ff4136;
+}
+
+/* Camada principal para a sequência do easter egg */
+.sequence-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0;
+    z-index: 9998;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 5s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Estilo para o texto final */
+.sequence-text {
+    font-size: 10vw; /* Tamanho responsivo */
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 0 15px #fff, 0 0 25px #fff; /* Efeito de bloom */
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+/* Animação do balão subindo */
+@keyframes floatUp {
+    from {
+        bottom: -20vh; /* Começa abaixo da tela */
+        opacity: 1;
+    }
+    to {
+        bottom: 120vh; /* Termina bem acima da tela */
+        opacity: 0;
+    }
+}
