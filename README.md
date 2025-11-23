@@ -47,4 +47,4 @@ Caso queira explorar ou modificar o código-fonte em sua máquina:
 
 ---
 
-Desenvolvido com ❤️ por **[Seu Nome]**.
+Desenvolvido com ❤️ por **[Pedro Victor]**.
