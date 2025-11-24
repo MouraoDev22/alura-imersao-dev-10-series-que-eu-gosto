@@ -395,7 +395,7 @@ article.expanded::before {
     background-image: var(--bg-image); /* Usa a variável definida pelo JS */
     background-size: cover;
     background-position: center;
-    filter: blur(25px) brightness(0.25); /* Desfoque e escurecimento */
+    filter: blur(7px) brightness(0.25); /* Desfoque e escurecimento */
     transform: scale(1.1); /* Aumenta a escala para evitar bordas visíveis do desfoque */
     z-index: -1; /* Coloca o fundo atrás do conteúdo */
 }
