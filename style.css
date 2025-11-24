@@ -87,6 +87,7 @@ header h1 {
     font-size: 1.5rem;
     transition: box-shadow 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
     width: 35rem; /* Largura ajustada */
+    color: var(--primary-color); /* Define a cor do texto digitado como branco */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra sutil, como nos artigos */
 }
 
