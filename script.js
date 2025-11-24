@@ -23,6 +23,9 @@ function renderizarArtigos(dadosParaRenderizar) {
         // Adiciona um ID único baseado no título para facilitar a busca
         article.id = normalizeText(item.titulo).replace(/\s+/g, '-');
 
+        // Armazena os gêneros em um atributo de dados para uma filtragem mais robusta
+        article.dataset.genres = JSON.stringify(item.generos);
+
         // Lógica para o Easter Egg do Pennywise
         let sinopseHTML = item.sinopse;
         if (item.titulo.includes("IT: Welcome to Derry")) {
@@ -137,22 +140,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 2. Itera sobre cada artigo na página.
         document.querySelectorAll('main article').forEach(article => {
-            // Pega o parágrafo que contém os gêneros.
-            const genresParagraph = article.querySelector('.article-content p:first-of-type');
-            if (!genresParagraph || !genresParagraph.textContent.includes('Gêneros:')) {
-                // Se não encontrar o parágrafo de gêneros, esconde o artigo por segurança.
+            // Pega os gêneros do atributo data-genres que adicionamos em renderizarArtigos
+            const articleGenresData = article.dataset.genres;
+            if (!articleGenresData) {
                 article.classList.add('hidden-by-filter');
                 return;
             }
-
-            // Extrai o texto dos gêneros, remove o "Gêneros:", e transforma em um array limpo.
-            const articleGenresText = normalizeText(genresParagraph.textContent.replace('Gêneros:', ''));
-
+            
+            // Converte os gêneros do artigo (que estão em formato JSON string) para um array de strings normalizadas
+            const articleGenres = JSON.parse(articleGenresData).map(g => normalizeText(g));
+            
             // 3. Verifica se o artigo deve ser exibido.
-            // Se nenhum filtro está ativo, OU se o texto de gêneros do artigo inclui pelo menos um dos gêneros selecionados.
-            const shouldShow = selectedGenres.length === 0 || selectedGenres.some(genre => articleGenresText.includes(normalizeText(genre)));
-
-            // 4. Mostra ou esconde o artigo com base na verificação.
+            // O artigo deve ser exibido se:
+            // - Nenhum gênero estiver selecionado (mostra todos)
+            // - OU, se pelo menos um dos gêneros do artigo estiver na lista de gêneros selecionados.
+            const shouldShow = selectedGenres.length === 0 || selectedGenres.some(selectedGenre => articleGenres.includes(normalizeText(selectedGenre)));
+            
             if (shouldShow) {
                 article.classList.remove('hidden-by-filter');
             } else {
