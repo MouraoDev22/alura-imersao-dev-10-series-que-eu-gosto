@@ -94,5 +94,13 @@
         "generos": ["Ficção Científica", "Suspense", "Drama"],
         "sinopse": "Uma série de antologia que explora um futuro próximo distorcido e tecnológico, onde as maiores inovações da humanidade colidem com seus instintos mais sombrios. Cada episódio é uma história independente que mergulha na paranoia coletiva do mundo moderno.",
         "video": "https://www.youtube.com/embed/jXq23Tq9FeU"
+    },
+    {
+        "poster": "posters/sweet-home-official-poster.webp",
+        "alt": "Pôster da série Sweet Home",
+        "titulo": "Sweet Home",
+        "generos": ["Terror", "Suspense", "Drama"],
+        "sinopse": "Hyunsoo, um estudante solitário do ensino médio que perdeu toda sua família em um terrível acidente, muda-se para um antigo complexo de apartamentos chamado Green Home.",
+        "video": "https://www.youtube.com/embed/_5sODvVhR0c"
     }
 ]
