@@ -110,5 +110,13 @@
         "generos": ["Comédia", "Drama"],
         "sinopse": "A série conta a história da família Rock entre os anos de 1982 até 1987, com o foco no menino Chris (Tyler James Williams). Em 1982, Chris completa 13 anos e muda-se com a sua família para Bedford-Stuyvesant, no Brooklyn. Lá, Chris vive situações corriqueiras da vida de um adolescente, tanto nas histórias que realmente acontecem quanto nos pensamentos que são expostos de uma forma humorística. Chris vive com os pais Julius (Terry Crews) e Rochelle (Tichina Arnold), e com os dois irmãos Drew (Tequan Richmond) e Tonya (Imani Hakim). Ele estuda no Corleone Junior High School, colégio onde Chris é o único aluno negro, situação que o vitimiza durante todo seu tempo lá. Mas ele faz um amigo, Greg (Vicent Martella), que vai estar sempre junto de Chris, passando por suas situações tragicamente cômicas. ",
         "video": "https://www.youtube.com/embed/5MVcc4ea4jY"
+    },
+    {
+        "poster": "posters/x-files-official-poster.webp",
+        "alt": "Pôster da série X FIles",
+        "titulo": "X Files",
+        "generos": ["Terror", "FIcção Científica"],
+        "sinopse": "Os agentes do FBI Fox Mulder (David Duchovny) e Dana Scully (Gillian Anderson) são o oposto um do outro: ele acredita em atividades paranormais, e ela não. Juntos, eles investigam estranhos casos que os levam a conspirações alienígenas envolvendo o governo, e chegam até a colocar suas carreiras em risco. Mas não importa o que quer que fique no caminho, eles vão até o fim para resolver os casos que chegam em suas mãos.",
+        "video": "https://www.youtube.com/embed/v4-GcS1UQyg"
     }
 ]
