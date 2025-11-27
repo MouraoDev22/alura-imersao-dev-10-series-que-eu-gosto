@@ -10,6 +10,7 @@
     --secondary-color: #e8eaed;
     --tertiary-color: #9aa0a6;
     --bg-color: #141414; /* Tom de preto mais profundo, comum em streamings */
+    --footer-color: #121212;
     --accent-color: #fff; /* Adicionada variável que estava faltando */
 }
 
@@ -277,7 +278,7 @@ main {
     justify-content: center;
     align-items: flex-start; /* Impede que os itens se estiquem verticalmente */
     gap: 1.5rem;
-    padding: 0 1rem;
+    padding: 2%;
     flex-grow: 1; /* Faz o conteúdo principal crescer e empurrar o footer para baixo */
 }
 
@@ -535,9 +536,9 @@ article a:hover {
 .footer {
     width: 100%;
     color: var(--tertiary-color);
-    background-color: var(--bg-color);
-    padding: 15px 20px;
-    border-top: 1px solid #3c4043;
+    background-color: var(--footer-color);
+    padding: 20px 20px;
+    border-top: 2px solid #3c4043;
     font-size: 0.8rem;
 }
 
@@ -551,7 +552,8 @@ article a:hover {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 5rem; /* Aumenta o espaço entre os dois grupos */
+    gap: 5rem;
+    padding-bottom: 1%; /* Aumenta o espaço entre os dois grupos */
 }
 
 .footer-group-left,

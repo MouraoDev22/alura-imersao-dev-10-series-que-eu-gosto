@@ -102,5 +102,13 @@
         "generos": ["Terror", "Suspense", "Drama"],
         "sinopse": "Hyunsoo, um estudante solitário do ensino médio que perdeu toda sua família em um terrível acidente, muda-se para um antigo complexo de apartamentos chamado Green Home.",
         "video": "https://www.youtube.com/embed/_5sODvVhR0c"
+    },
+    {
+        "poster": "posters/everybody-hates-chris-official-poster.webp",
+        "alt": "Pôster da série Everybody Hates Chris",
+        "titulo": "Everybody Hates Chris",
+        "generos": ["Comédia", "Drama"],
+        "sinopse": "A série conta a história da família Rock entre os anos de 1982 até 1987, com o foco no menino Chris (Tyler James Williams). Em 1982, Chris completa 13 anos e muda-se com a sua família para Bedford-Stuyvesant, no Brooklyn. Lá, Chris vive situações corriqueiras da vida de um adolescente, tanto nas histórias que realmente acontecem quanto nos pensamentos que são expostos de uma forma humorística. Chris vive com os pais Julius (Terry Crews) e Rochelle (Tichina Arnold), e com os dois irmãos Drew (Tequan Richmond) e Tonya (Imani Hakim). Ele estuda no Corleone Junior High School, colégio onde Chris é o único aluno negro, situação que o vitimiza durante todo seu tempo lá. Mas ele faz um amigo, Greg (Vicent Martella), que vai estar sempre junto de Chris, passando por suas situações tragicamente cômicas. ",
+        "video": "https://www.youtube.com/embed/5MVcc4ea4jY"
     }
 ]
